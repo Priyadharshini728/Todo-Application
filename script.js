@@ -391,3 +391,4 @@ setInterval(checkReminders, 30000);
 // Display saved tasks when page opens
 displayTasks();
 checkReminders();
+// Updated

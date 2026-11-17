@@ -944,5 +944,3 @@ checkReminders();
 
 ## RESULT
 The program for creating To-do list using JavaScript is executed successfully.
-## RESULT
-Thus, the To-Do Application was successfully developed and executed using HTML, CSS and JavaScript.
