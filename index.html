@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>My To-Do List</h1>
+            <p>Organize your tasks and manage your time.</p>
+            <p id="todayDate"></p>
+        </header>
+
+        <section class="summary">
+            <div class="summary-box">
+                <h3>Total Tasks</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Completed</h3>
+                <p id="completedCount">0</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Overdue</h3>
+                <p id="overdueCount">0</p>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <h3>Task Progress</h3>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+            <p id="progressPercent">0% Completed</p>
+        </section>
+
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <label for="taskInput">Task Name</label>
+                <input type="text" id="taskInput"
+                    placeholder="Enter your task" required>
+
+                <label for="category">Task Category</label>
+                <select id="category">
+                    <option value="College">College</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Health">Health</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="dueDate">Due Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+
+                    <div>
+                        <label for="dueTime">Due Time</label>
+                        <input type="time" id="dueTime" required>
+                    </div>
+                </div>
+
+                <label for="priority">Priority</label>
+                <select id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <button type="submit" id="submitBtn">Add Task</button>
+                <button type="button" id="cancelEdit" hidden>
+                    Cancel
+                </button>
+
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>My Tasks</h2>
+
+            <input type="search" id="searchInput"
+                placeholder="Search tasks...">
+
+            <div class="filters">
+                <button class="filter active" data-filter="All">All</button>
+                <button class="filter" data-filter="Today">Today</button>
+                <button class="filter" data-filter="Upcoming">Upcoming</button>
+                <button class="filter" data-filter="Overdue">Overdue</button>
+                <button class="filter" data-filter="Active">Active</button>
+                <button class="filter" data-filter="Completed">Completed</button>
+            </div>
+
+            <div class="sort-section">
+                <label for="sortTasks">Sort by:</label>
+                <select id="sortTasks">
+                    <option value="date">Due Date</option>
+                    <option value="priority">Priority</option>
+                    <option value="name">Task Name</option>
+                </select>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage">
+                No tasks available. Add a new task to get started!
+            </p>
+
+            <button type="button" id="clearCompleted">
+                Clear Completed Tasks
+            </button>
+        </section>
+
+        <footer>
+            <p>Designed by PRIYADHARSHINI P</p>
+            <p>Register Number: 212224040252</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
